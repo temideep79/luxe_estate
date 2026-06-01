@@ -20,7 +20,7 @@ export default function Testimonials() {
   return (
     <section
       className="py-32 relative overflow-hidden"
-      style={{ background: "#F5F0E8" }}
+      style={{ background: "#0b1a2e" }}
     >
       {/* Giant quotation mark */}
       <div
@@ -47,7 +47,7 @@ export default function Testimonials() {
           </p>
           <h2
             className="text-[clamp(2rem,5vw,4rem)] font-black leading-none tracking-tight"
-            style={{ color: "#0A1628", fontFamily: "'Poppins', sans-serif" }}
+            style={{ color: "#FFFFFF", fontFamily: "'Poppins', sans-serif" }}
           >
             Voices of
             <span style={{ color: "#8B6347" }}> Excellence</span>
@@ -66,7 +66,7 @@ export default function Testimonials() {
           >
             <blockquote
               className="text-xl md:text-2xl font-light leading-relaxed mb-10 max-w-3xl mx-auto"
-              style={{ color: "#0A1628", fontFamily: "'Poppins', sans-serif" }}
+              style={{ color: "#FFFFFF", fontFamily: "'Poppins', sans-serif" }}
             >
               "{current.quote}"
             </blockquote>
@@ -84,7 +84,7 @@ export default function Testimonials() {
               <div className="text-left">
                 <p
                   className="font-bold text-base"
-                  style={{ color: "#0A1628", fontFamily: "'Poppins', sans-serif" }}
+                  style={{ color: "#FFFFFF", fontFamily: "'Poppins', sans-serif" }}
                 >
                   {current.name}
                 </p>

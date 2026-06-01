@@ -6,7 +6,7 @@ import PropertyCard from "@/components/PropertyCard";
 
 export default function FeaturedProperties() {
   return (
-    <section id="properties" className="py-32 relative" style={{ background: "#F5F0E8" }}>
+    <section id="properties" className="py-32 relative" style={{ background: "#0d1f35" }}>
       {/* Section header */}
       <div className="max-w-7xl mx-auto px-6 lg:px-12 mb-16">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
@@ -27,11 +27,11 @@ export default function FeaturedProperties() {
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.1 }}
               className="text-[clamp(2.5rem,6vw,5rem)] font-black leading-none tracking-tight"
-              style={{ color: "#0A1628", fontFamily: "'Poppins', sans-serif" }}
+              style={{ color: "#FFFFFF", fontFamily: "'Poppins', sans-serif" }}
             >
               Featured
               <br />
-              <span style={{ color: "#8B6347" }}>Properties</span>
+              <span style={{ color: "#C4A882" }}>Properties</span>
             </motion.h2>
           </div>
 
@@ -42,7 +42,7 @@ export default function FeaturedProperties() {
             transition={{ duration: 0.7, delay: 0.2 }}
             href="#"
             className="group relative inline-flex items-center gap-3 text-sm font-bold tracking-widest uppercase pb-1 self-end"
-            style={{ color: "#0A1628", fontFamily: "'Poppins', sans-serif" }}
+            style={{ color: "#FFFFFF", fontFamily: "'Poppins', sans-serif" }}
           >
             View All Properties
             <span className="text-lg" style={{ color: "#8B6347" }}>→</span>
