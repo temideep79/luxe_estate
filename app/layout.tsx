@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import CustomCursor from "@/components/CustomCursor";
 
 export const metadata: Metadata = {
   title: "Luxe Realty — Find Your Perfect Place",
@@ -23,7 +22,6 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full antialiased" style={{ fontFamily: "'Poppins', sans-serif" }}>
-        <CustomCursor />
         {children}
       </body>
     </html>
