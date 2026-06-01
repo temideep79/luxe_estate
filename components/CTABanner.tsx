@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function CTABanner() {
   return (
-    <section className="relative py-32 overflow-hidden" style={{ background: "#0A1628" }}>
+    <section id="contact" className="relative py-32 overflow-hidden scroll-mt-20" style={{ background: "#0A1628" }}>
       {/* Background image with dark overlay */}
       <div className="absolute inset-0 z-0">
         <Image

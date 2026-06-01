@@ -6,7 +6,7 @@ import PropertyCard from "@/components/PropertyCard";
 
 export default function FeaturedProperties() {
   return (
-    <section id="properties" className="py-32 relative" style={{ background: "#0d1f35" }}>
+    <section id="properties" className="py-32 relative scroll-mt-20" style={{ background: "#0d1f35" }}>
       {/* Section header */}
       <div className="max-w-7xl mx-auto px-6 lg:px-12 mb-16">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">

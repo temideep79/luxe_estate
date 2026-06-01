@@ -37,7 +37,7 @@ function Counter({ target, suffix }: { target: number; suffix: string }) {
 
 export default function Services() {
   return (
-    <section id="services" className="py-32 relative overflow-hidden" style={{ background: "#0A1628" }}>
+    <section id="services" className="py-32 relative overflow-hidden scroll-mt-20" style={{ background: "#0A1628" }}>
       {/* Background accent */}
       <div
         className="absolute top-0 left-0 w-1/2 h-full opacity-5"

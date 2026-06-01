@@ -19,7 +19,8 @@ export default function Testimonials() {
 
   return (
     <section
-      className="py-32 relative overflow-hidden"
+      id="about"
+      className="py-32 relative overflow-hidden scroll-mt-20"
       style={{ background: "#0b1a2e" }}
     >
       {/* Giant quotation mark */}
