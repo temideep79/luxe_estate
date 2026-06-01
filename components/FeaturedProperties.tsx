@@ -6,9 +6,9 @@ import PropertyCard from "@/components/PropertyCard";
 
 export default function FeaturedProperties() {
   return (
-    <section id="properties" className="py-32 relative scroll-mt-20" style={{ background: "#0d1f35" }}>
+    <section id="properties" className="py-20 sm:py-32 relative scroll-mt-20" style={{ background: "#0d1f35" }}>
       {/* Section header */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 mb-16">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-12 mb-16">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
           <div>
             <motion.p
@@ -65,7 +65,7 @@ export default function FeaturedProperties() {
       </div>
 
       {/* Properties grid */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {properties.map((property, index) => (
             <PropertyCard key={property.id} property={property} index={index} />

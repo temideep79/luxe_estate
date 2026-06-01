@@ -4,7 +4,11 @@ import { useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 
-const words = ["Find", "Your", "Perfect", "Place"];
+const stats = [
+  { value: "2,400+", label: "Properties" },
+  { value: "98%", label: "Satisfaction" },
+  { value: "$4.2B", label: "Volume Sold" },
+];
 
 function WordReveal({ word, delay, accent }: { word: string; delay: number; accent?: boolean }) {
   return (
@@ -60,18 +64,14 @@ export default function Hero() {
         />
       </motion.div>
 
-      {/* Floating stat badges */}
+      {/* Floating stat badges — absolute on desktop only */}
       <motion.div
         initial={{ opacity: 0, x: -40 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 1.4, duration: 0.8 }}
-        className="absolute top-1/3 right-8 md:right-16 z-10 flex flex-col gap-4"
+        className="hidden md:flex md:absolute md:top-1/3 md:right-8 lg:right-16 z-10 flex-col gap-4"
       >
-        {[
-          { value: "2,400+", label: "Properties" },
-          { value: "98%", label: "Satisfaction" },
-          { value: "$4.2B", label: "Volume Sold" },
-        ].map((stat) => (
+        {stats.map((stat) => (
           <div
             key={stat.label}
             className="backdrop-blur-md rounded-2xl px-5 py-4 text-center border"
@@ -97,21 +97,21 @@ export default function Hero() {
       </motion.div>
 
       {/* Main content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 pt-32 pb-24">
+      <div className="relative z-10 max-w-7xl mx-auto w-full px-5 sm:px-6 lg:px-12 pt-28 sm:pt-32 pb-20 sm:pb-24">
         {/* Eyebrow */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6 }}
-          className="text-xs font-semibold tracking-[0.4em] uppercase mb-8"
+          className="text-[10px] sm:text-xs font-semibold tracking-[0.25em] sm:tracking-[0.4em] uppercase mb-6 sm:mb-8"
           style={{ color: "#8B6347", fontFamily: "'Poppins', sans-serif" }}
         >
-          ✦ &nbsp; Award-Winning Real Estate &nbsp; ✦
+          ✦&nbsp; Award-Winning Real Estate &nbsp;✦
         </motion.p>
 
         {/* Giant headline */}
         <h1
-          className="text-[clamp(2.5rem,7vw,6rem)] font-black leading-[0.9] tracking-tight mb-8"
+          className="text-[clamp(2.25rem,9vw,6rem)] font-black leading-[0.95] sm:leading-[0.9] tracking-tight mb-6 sm:mb-8"
           style={{ fontFamily: "'Poppins', sans-serif" }}
         >
           <div className="flex gap-[0.2em] flex-wrap">
@@ -129,7 +129,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.2, duration: 0.8 }}
-          className="max-w-lg text-sm font-light leading-relaxed mb-10"
+          className="max-w-lg text-sm sm:text-base font-light leading-relaxed mb-8 sm:mb-10"
           style={{ color: "rgba(255,255,255,0.6)", fontFamily: "'Poppins', sans-serif" }}
         >
           We curate extraordinary properties for extraordinary people.
@@ -141,11 +141,11 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.3, duration: 0.8 }}
-          className="flex flex-wrap gap-4"
+          className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4"
         >
           <a
             href="#properties"
-            className="px-8 py-4 rounded-full text-sm font-bold tracking-widest uppercase transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+            className="text-center px-7 sm:px-8 py-3.5 sm:py-4 rounded-full text-xs sm:text-sm font-bold tracking-widest uppercase transition-all duration-300 hover:scale-105 hover:shadow-2xl"
             style={{
               background: "#8B6347",
               color: "#fff",
@@ -157,7 +157,7 @@ export default function Hero() {
           </a>
           <a
             href="#services"
-            className="px-8 py-4 rounded-full text-sm font-bold tracking-widest uppercase border transition-all duration-300 hover:scale-105"
+            className="text-center px-7 sm:px-8 py-3.5 sm:py-4 rounded-full text-xs sm:text-sm font-bold tracking-widest uppercase border transition-all duration-300 hover:scale-105"
             style={{
               borderColor: "rgba(255,255,255,0.3)",
               color: "#fff",
@@ -166,6 +166,38 @@ export default function Hero() {
           >
             Our Services
           </a>
+        </motion.div>
+
+        {/* Inline stat badges — mobile only, in normal flow */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.5, duration: 0.8 }}
+          className="grid grid-cols-3 gap-2.5 mt-10 md:hidden"
+        >
+          {stats.map((stat) => (
+            <div
+              key={stat.label}
+              className="backdrop-blur-md rounded-xl px-2 py-3 text-center border"
+              style={{
+                background: "rgba(10,22,40,0.6)",
+                borderColor: "rgba(196,168,130,0.25)",
+              }}
+            >
+              <p
+                className="text-base sm:text-lg font-bold leading-tight"
+                style={{ color: "#C4A882", fontFamily: "'Poppins', sans-serif" }}
+              >
+                {stat.value}
+              </p>
+              <p
+                className="text-[9px] font-light tracking-wider uppercase text-white/60 mt-0.5"
+                style={{ fontFamily: "'Poppins', sans-serif" }}
+              >
+                {stat.label}
+              </p>
+            </div>
+          ))}
         </motion.div>
       </div>
 

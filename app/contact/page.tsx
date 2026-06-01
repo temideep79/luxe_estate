@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import PageHeader from "@/components/PageHeader";
 
 export const metadata = { title: "Contact — Luxe Realty" };
 
@@ -14,36 +15,19 @@ export default function ContactPage() {
     <main style={{ background: "#0A1628", minHeight: "100vh" }}>
       <Navbar />
 
-      {/* Header */}
-      <section className="pt-36 pb-16 px-6 lg:px-12 max-w-7xl mx-auto">
-        <p
-          className="text-xs font-semibold tracking-[0.4em] uppercase mb-3"
-          style={{ color: "#8B6347", fontFamily: "'Poppins', sans-serif" }}
-        >
-          ✦ &nbsp; Get In Touch
-        </p>
-        <h1
-          className="text-5xl md:text-6xl font-black leading-none tracking-tight text-white mb-4"
-          style={{ fontFamily: "'Poppins', sans-serif" }}
-        >
-          Contact <span style={{ color: "#C4A882" }}>Us</span>
-        </h1>
-        <p
-          className="text-sm font-light max-w-lg"
-          style={{ color: "rgba(255,255,255,0.5)", fontFamily: "'Poppins', sans-serif" }}
-        >
-          Our advisors are available to answer any questions and schedule your private consultation.
-        </p>
-        <div className="mt-8 h-px" style={{ background: "linear-gradient(to right, #8B6347, transparent)" }} />
-      </section>
+      <PageHeader
+        eyebrow="Get In Touch"
+        title={<>Contact <span style={{ color: "#C4A882" }}>Us</span></>}
+        description="Our advisors are available to answer any questions and schedule your private consultation."
+      />
 
       {/* Form + Info */}
-      <section className="pb-24 px-6 lg:px-12 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+      <section className="pb-24 px-5 sm:px-6 lg:px-12 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
 
           {/* Contact form */}
           <div
-            className="rounded-3xl p-8 border"
+            className="rounded-3xl p-6 sm:p-8 border"
             style={{ background: "rgba(15,30,56,0.6)", borderColor: "rgba(196,168,130,0.15)" }}
           >
             <h2
@@ -172,10 +156,10 @@ export default function ContactPage() {
                   ].map(({ icon, text }) => (
                     <p
                       key={text}
-                      className="text-sm font-light flex items-center gap-2"
+                      className="text-sm font-light flex items-start gap-2 break-words"
                       style={{ color: "rgba(255,255,255,0.6)", fontFamily: "'Poppins', sans-serif" }}
                     >
-                      <span>{icon}</span> {text}
+                      <span className="shrink-0">{icon}</span> <span className="min-w-0 break-words">{text}</span>
                     </p>
                   ))}
                 </div>

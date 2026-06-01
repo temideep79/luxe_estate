@@ -37,7 +37,7 @@ function Counter({ target, suffix }: { target: number; suffix: string }) {
 
 export default function Services() {
   return (
-    <section id="services" className="py-32 relative overflow-hidden scroll-mt-20" style={{ background: "#0A1628" }}>
+    <section id="services" className="py-20 sm:py-32 relative overflow-hidden scroll-mt-20" style={{ background: "#0A1628" }}>
       {/* Background accent */}
       <div
         className="absolute top-0 left-0 w-1/2 h-full opacity-5"
@@ -46,9 +46,9 @@ export default function Services() {
         }}
       />
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-12 relative z-10">
         {/* Header */}
-        <div className="mb-20">
+        <div className="mb-12 sm:mb-20">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -74,7 +74,7 @@ export default function Services() {
         </div>
 
         {/* Services list — asymmetric */}
-        <div className="space-y-0 mb-28">
+        <div className="space-y-0 mb-16 sm:mb-28">
           {services.map((service, i) => (
             <motion.div
               key={service.id}
@@ -82,12 +82,12 @@ export default function Services() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.7, delay: i * 0.15 }}
-              className="group py-10 flex flex-col md:flex-row md:items-start gap-6 md:gap-16 border-t"
+              className="group py-8 sm:py-10 flex flex-col md:flex-row md:items-start gap-4 sm:gap-6 md:gap-16 border-t"
               style={{ borderColor: "rgba(196,168,130,0.15)" }}
             >
               {/* Oversized number */}
               <span
-                className="text-7xl md:text-8xl font-black leading-none shrink-0 transition-colors duration-300 group-hover:text-[#8B6347]"
+                className="text-5xl sm:text-7xl md:text-8xl font-black leading-none shrink-0 transition-colors duration-300 group-hover:text-[#8B6347]"
                 style={{ color: "rgba(196,168,130,0.2)", fontFamily: "'Poppins', sans-serif" }}
               >
                 {service.number}

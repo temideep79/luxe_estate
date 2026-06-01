@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import PageHeader from "@/components/PageHeader";
 import Image from "next/image";
 import { testimonials } from "@/data/testimonials";
 
@@ -17,35 +18,18 @@ export default function AboutPage() {
     <main style={{ background: "#0A1628", minHeight: "100vh" }}>
       <Navbar />
 
-      {/* Header */}
-      <section className="pt-36 pb-16 px-6 lg:px-12 max-w-7xl mx-auto">
-        <p
-          className="text-xs font-semibold tracking-[0.4em] uppercase mb-3"
-          style={{ color: "#8B6347", fontFamily: "'Poppins', sans-serif" }}
-        >
-          ✦ &nbsp; Our Story
-        </p>
-        <h1
-          className="text-5xl md:text-6xl font-black leading-none tracking-tight text-white mb-4"
-          style={{ fontFamily: "'Poppins', sans-serif" }}
-        >
-          About <span style={{ color: "#C4A882" }}>Luxe</span>
-        </h1>
-        <p
-          className="text-sm font-light max-w-lg"
-          style={{ color: "rgba(255,255,255,0.5)", fontFamily: "'Poppins', sans-serif" }}
-        >
-          Founded in 2009, Luxe Realty has become the benchmark for luxury real estate advisory — trusted by clients across four continents.
-        </p>
-        <div className="mt-8 h-px" style={{ background: "linear-gradient(to right, #8B6347, transparent)" }} />
-      </section>
+      <PageHeader
+        eyebrow="Our Story"
+        title={<>About <span style={{ color: "#C4A882" }}>Luxe</span></>}
+        description="Founded in 2009, Luxe Realty has become the benchmark for luxury real estate advisory — trusted by clients across four continents."
+      />
 
       {/* Mission */}
-      <section className="pb-24 px-6 lg:px-12 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <section className="pb-24 px-5 sm:px-6 lg:px-12 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <div>
             <h2
-              className="text-3xl md:text-4xl font-black text-white mb-6 leading-tight"
+              className="text-2xl sm:text-3xl md:text-4xl font-black text-white mb-6 leading-tight"
               style={{ fontFamily: "'Poppins', sans-serif" }}
             >
               We don't just sell homes. <br />
@@ -64,7 +48,7 @@ export default function AboutPage() {
               With over $4.2 billion in transactions and a network spanning 30+ markets, our advisors bring unrivaled expertise to every engagement — whether you're buying your first luxury residence or expanding a global portfolio.
             </p>
           </div>
-          <div className="relative h-80 lg:h-96 rounded-3xl overflow-hidden">
+          <div className="relative h-64 sm:h-80 lg:h-96 rounded-3xl overflow-hidden">
             <Image
               src="https://picsum.photos/seed/about/800/600"
               alt="Luxe Realty Office"
@@ -78,14 +62,14 @@ export default function AboutPage() {
       </section>
 
       {/* Team */}
-      <section className="pb-24 px-6 lg:px-12 max-w-7xl mx-auto">
+      <section className="pb-24 px-5 sm:px-6 lg:px-12 max-w-7xl mx-auto">
         <h2
-          className="text-3xl font-black text-white mb-10"
+          className="text-2xl sm:text-3xl font-black text-white mb-8 sm:mb-10"
           style={{ fontFamily: "'Poppins', sans-serif" }}
         >
           Meet the <span style={{ color: "#C4A882" }}>Team</span>
         </h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
           {team.map((member) => (
             <div key={member.name} className="group text-center">
               <div className="relative w-full aspect-square rounded-2xl overflow-hidden mb-4 border"
@@ -116,9 +100,9 @@ export default function AboutPage() {
       </section>
 
       {/* Testimonials */}
-      <section className="pb-32 px-6 lg:px-12 max-w-7xl mx-auto">
+      <section className="pb-24 sm:pb-32 px-5 sm:px-6 lg:px-12 max-w-7xl mx-auto">
         <h2
-          className="text-3xl font-black text-white mb-10"
+          className="text-2xl sm:text-3xl font-black text-white mb-8 sm:mb-10"
           style={{ fontFamily: "'Poppins', sans-serif" }}
         >
           Client <span style={{ color: "#C4A882" }}>Stories</span>
