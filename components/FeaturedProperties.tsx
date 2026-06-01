@@ -26,7 +26,7 @@ export default function FeaturedProperties() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className="text-[clamp(2.5rem,6vw,5rem)] font-black leading-none tracking-tight"
+              className="text-[clamp(2rem,4vw,3.5rem)] font-black leading-none tracking-tight"
               style={{ color: "#FFFFFF", fontFamily: "'Poppins', sans-serif" }}
             >
               Featured

@@ -47,7 +47,7 @@ export default function Testimonials() {
             ✦ &nbsp; Client Stories
           </p>
           <h2
-            className="text-[clamp(2rem,5vw,4rem)] font-black leading-none tracking-tight"
+            className="text-[clamp(1.8rem,3.5vw,3rem)] font-black leading-none tracking-tight"
             style={{ color: "#FFFFFF", fontFamily: "'Poppins', sans-serif" }}
           >
             Voices of
@@ -66,7 +66,7 @@ export default function Testimonials() {
             className="text-center"
           >
             <blockquote
-              className="text-xl md:text-2xl font-light leading-relaxed mb-10 max-w-3xl mx-auto"
+              className="text-base md:text-lg font-light leading-relaxed mb-10 max-w-3xl mx-auto"
               style={{ color: "#FFFFFF", fontFamily: "'Poppins', sans-serif" }}
             >
               "{current.quote}"

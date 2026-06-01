@@ -46,7 +46,7 @@ export default function CTABanner() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="text-[clamp(2.5rem,7vw,6rem)] font-black leading-none tracking-tight text-white mb-4"
+          className="text-[clamp(2rem,5vw,4.5rem)] font-black leading-none tracking-tight text-white mb-4"
           style={{ fontFamily: "'Poppins', sans-serif" }}
         >
           Your Dream Home
@@ -59,7 +59,7 @@ export default function CTABanner() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="text-lg font-light max-w-xl mx-auto mb-12"
+          className="text-sm font-light max-w-xl mx-auto mb-12"
           style={{ color: "rgba(255,255,255,0.55)", fontFamily: "'Poppins', sans-serif" }}
         >
           Let our world-class advisors match you with the property that defines

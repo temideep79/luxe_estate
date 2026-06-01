@@ -111,7 +111,7 @@ export default function Hero() {
 
         {/* Giant headline */}
         <h1
-          className="text-[clamp(3.5rem,10vw,9rem)] font-black leading-[0.9] tracking-tight mb-10"
+          className="text-[clamp(2.5rem,7vw,6rem)] font-black leading-[0.9] tracking-tight mb-8"
           style={{ fontFamily: "'Poppins', sans-serif" }}
         >
           <div className="flex gap-[0.2em] flex-wrap">
@@ -129,7 +129,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.2, duration: 0.8 }}
-          className="max-w-lg text-lg font-light leading-relaxed mb-12"
+          className="max-w-lg text-sm font-light leading-relaxed mb-10"
           style={{ color: "rgba(255,255,255,0.6)", fontFamily: "'Poppins', sans-serif" }}
         >
           We curate extraordinary properties for extraordinary people.
